@@ -14,6 +14,7 @@
 /* 5. ANIMATIONS */
 /* --a. ANIMATED CLASSES */
 /* --b. ANIMATION KEYFRAMES */
+/* 6. MEDIA QUERY STYLES */
 /* =========================== */
 
 /* 1. GENERAL STYLES */
@@ -304,5 +305,13 @@ main {
 }
 100% {
     color: white;
+  }
+}
+
+/* 6. MEDIA QUERY STYLES */
+/* Styles for screens 600px wide or less (e.g., phones) */
+@media (max-width: 600px) {
+  .achievements {
+    display:none;
   }
 }
