@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* ==== TABLE OF CONTENTS ==== */
+/* 1. GENERAL STYLES */
+/* --a. HEADINGS */
+/* --b. INPUTS */
+/* 2. HEADER */
+/* 3. BODY */
+/* --a. MAIN */
+/* --b. SET SECTION */
+/* --c. ACHIEVEMENT SECTION */
+/* 4. FOOTER */
+/* 5. ANIMATIONS */
+/* --a. ANIMATED CLASSES */
+/* --b. ANIMATION KEYFRAMES */
+/* =========================== */
+
+/* 1. GENERAL STYLES */
+/* --a. HEADINGS */
+h1 {
+    text-align: center;
+    text-justify: inter-character;
+    grid-column: 1/4;
+    height: auto;
+}
+
+/* --b. INPUTS */
+input {
+    all:unset;
+    width: 95%;
+    box-sizing:border-box;
+    font-size: inherits;
+}
+input[type="number"]::-webkit-inner-spin-button {
+  cursor:pointer;
+    -webkit-appearance:none;
+    overflow:scroll;
+    background: linear-gradient(white,black, white);
+    /* background-color: #fff; */
+    /* https://bennettfeely.com/clippy/ */
+    clip-path: polygon(50% 0, 100% 30%, 65% 30%, 65% 70%, 100% 70%, 50% 100%, 0 70%, 35% 70%, 35% 30%, 0 30%);
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    bottom: 5px;
+    width: 12%;
+    transition:0.5s;
+}
+
+
+/* 2. HEADER */
+#logo {
+    text-align: left;
+    margin-left: 20px;
+}
+
+/* 3. BODY */
+body {
+    display:grid;
+    grid: 80px / 1fr 5fr 2fr; /* Specify the first row height */
+    color:white;
+    background-color: #000;
+    font-family: 'Press Start 2P', sans-serif;
+    height:90vh;
+}
+
+/* --a. MAIN */
+main {
+    margin:10px;
+    padding:5px;
+}
+
+.introMsg {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 4px #fff;
+    grid-column: 1/3;
+    margin:10px;
+    padding:5px;
+}
+
+#qForm {
+    display: inline-grid;
+    grid: 2fr 1fr / 1fr 2fr;
+    border: solid 4px #fff;
+    width:100%;
+    height:100%;
+    transition:0.5s;
+}
+
+.mainZone {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 4px #fff;
+    margin:10px;
+    transition:0.5s;
+}
+
+.equation {
+    grid-column: 1/3;
+    display:none;
+    /* display: inline-grid; */
+    grid: 1fr 1fr / 1fr auto;
+    /* border: solid 4px white; */
+}
+
+.num {
+    display:flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 10vw;
+    font-size: 3em;
+    /* border: solid 4px #fff; */
+}
+
+.num1 {
+    grid-column: 1/3;
+}
+
+.num2 {
+    grid-column: 2/2;
+}
+
+.operator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    grid-column: 1/1;
+}
+
+/* START BUTTON */
+#startBtn {
+    grid-column: 1/3;
+    display:flex;
+    align-items: center;
+    justify-items: center;
+}
+#startBtn:hover {
+    color:yellow;
+    border: solid yellow 4px;
+}
+
+
+/* SCROLLER ELEMENT */
+
+.scroller {
+    display:none;
+    text-align: right;
+    padding-right: 10vw;
+    margin-right: 10px;
+    font-size: 3em;
+    transition: 0.5s;
+}
+.scroller:hover {
+    color: yellow;
+    border: solid yellow 4px;
+}
+/* .scroller:focus {
+    color: orange;
+    border: solid orange 4px;
+} */
+
+#equals {
+    display:none;
+    text-align:center;
+    transition: 0.5s;
+}
+#equals:hover {
+    color: yellow;
+    border: solid yellow 4px;
+}
+
+#equation {
+    color: green;
+}
+
+#result {
+    text-align: center;
+}
+
+#startBtn {
+    text-align: center;
+}
+
+/* --b. SET SECTION */
+.sets {
+    display: inline-grid;
+    /* border: solid 4px #fff;
+    margin:10px;
+    padding:5px; */
+}
+.set {
+    border: solid 4px #fff;
+    margin: 10px;
+    padding:5px;
+    transition: 0.5s;
+}
+.set:hover {
+    color: yellow;
+    border: solid 4px yellow;
+}
+.selected {
+    color: black;
+    background-color: #fff;
+}
+.selected:hover {
+    color: orange;
+    border:4px solid orange !important;
+}
+#addSet {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+#subSet {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+#mltSet {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+#divSet {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --c. ACHIEVEMENT SECTION */
+.achievements {
+    border: solid 4px #fff;
+    margin:10px;
+    padding:5px;
+}
+#achievementDiv {
+    background-color:green;
+    color:white;
+    border:solid 2px black;
+    width:200px;
+    padding:5px;
+    border-radius:5px;
+}
+
+.log__active {
+    
+}
+
+/* 4. FOOTER */
+
+
+/* 5. ANIMATIONS */
+/* --a. ANIMATED CLASSES */
+.correct {
+    animation-name: correct-anim;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    /* animation-iteration-count: 1; */
+}
+
+.incorrect {
+    animation-name: incorrect-anim;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in;
+    /* animation-iteration-count: 1; */
+}
+
+/* --b. ANIMATION KEYFRAMES */
+@keyframes correct-anim {
+  0% {
+    color: white;
+    transform: scale(1);
+}
+50% {
+    color: lime;
+    border: solid 4px lime;
+    transform:scale(1.2);
+}
+100% {
+    color: white;
+    transform: scale(1);
+  }
+}
+
+@keyframes incorrect-anim {
+  0% {
+    color: white;
+    transform: translateX(0);
+}
+33% {
+    color: orange;
+    border: solid 4px orange;
+    transform: translateX(-5px);
+}
+66% {
+    color: orange;
+    border: solid 4px orange;
+    transform: translateX(5px);
+}
+100% {
+    color: white;
+  }
+}

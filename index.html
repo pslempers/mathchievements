@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mathchievements</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="script.js" type="module"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Mathchievements</h1>
+        <section class="sets">
+            <div class="set" id="addSet">add</div>
+            <div class="set" id="subSet">sub</div>
+            <div class="set" id="mltSet">mlt</div>
+            <div class="set" id="divSet">div</div>
+        </section>
+        <main>
+
+            <form action="/" id="qForm" method="post">
+                <div class="introMsg">
+                    <h2>Welcome!</h2>
+                </div>
+                <div class="mainZone equation">
+                    <div class="num num1"></div>
+                    <div class="operator"></div>
+                    <div class="num num2"></div>
+                </div>
+                <div class="mainZone"  id="startBtn">
+                    <h2>Start</h2>
+                </div>
+                <input type="submit" class="mainZone" id="equals" value="equals" style="display:none"></input>
+                <input type="number" placeholder="0" class="mainZone scroller" id="userInput" step="any"></input>
+            </form>
+        </main>
+        <section class="achievements">
+            achievement zone
+        </section>
+    </body>
+</html>
