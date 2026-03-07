@@ -276,7 +276,7 @@ $(document).ready(function () {
                 $('.scroller').val('');
                 break;
             case "-":
-                console.log("-");
+                $('.scroller').val("-"+$('.scroller').val());
                 break;
             case ".":
                 console.log(".");
