@@ -50,8 +50,9 @@ $(document).ready(function () {
         }
         //else, prompt user to select a set
         else {
-            $('.introMsg').html('<h2><- Select Set</h2>');
+            $('.introMsg').html('<h2>Select Set</h2>');
             animIncorrect('.introMsg');
+            animCorrect('.sets');
         }
     });
 
@@ -250,6 +251,40 @@ $(document).ready(function () {
     function animIncorrect(selector) {
         $(selector).addClass('incorrect');
         setTimeout(() => {$(selector).removeClass('incorrect')}, 1000);
+    }
+
+    //NUMPAD FUNCTIONALITY
+    // Function on button click puts the number into the scroller.
+    $('.numKey').on('click', (e) => {
+        // console.log(e.currentTarget.value);
+        addNum(e.currentTarget.value);
+        // console.log($('.scroller').val());
+    })
+
+    /** addNum(id)
+     * pushes values selected by id into the scroller element.
+     * @param {} id - Numeric input allowing 0-9, dashes and dots.
+     */
+    function addNum(id) {
+        switch(id) {
+            case "ENT":
+                if($('.selected').length > 0){
+                    $('#qForm').submit();
+                }
+                break;
+            case "C":
+                $('.scroller').val('');
+                break;
+            case "-":
+                console.log("-");
+                break;
+            case ".":
+                console.log(".");
+                break;
+            default:
+                $('.scroller').val($('.scroller').val() + `${id}`);
+                break;
+        }
     }
 
     //Add some achievements later
