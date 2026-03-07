@@ -279,7 +279,7 @@ $(document).ready(function () {
                 $('.scroller').val("-"+$('.scroller').val());
                 break;
             case ".":
-                console.log(".");
+                $('.scroller').val($('.scroller').val().concat("."));
                 break;
             default:
                 $('.scroller').val($('.scroller').val() + `${id}`);

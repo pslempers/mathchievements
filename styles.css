@@ -20,6 +20,10 @@
 /* =========================== */
 
 /* 1. GENERAL STYLES */
+html {
+    touch-action: manipulation;
+}
+
 /* --1a. HEADINGS */
 h1 {
     font-size: 2em;
