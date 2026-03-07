@@ -80,7 +80,7 @@ button:hover {
 /* 3. BODY */
 body {
     display:grid;
-    grid: 80px 1fr 1fr / 1fr 3fr 3fr; /* Specify the first row height */
+    grid: 80px 1fr 2fr / 1fr 3fr 3fr; /* Specify the first row height */
     color:white;
     background-color: #000;
     font-family: 'Press Start 2P', sans-serif;
@@ -369,30 +369,38 @@ main {
 
     /* Update body grid layout */
     body {
-        grid: 80px 1fr 3fr 2fr / 1fr 5fr 1fr; /* Specify the first row height */
+        grid: 1fr 1fr 1fr 3fr 2fr / 1fr; /* Specify the first row height */
+    }
+
+    /* Update introMsg */
+    .introMsg {
+        grid-column: 1/3;
+    }
+
+    /* Update startBtn */
+    #startBtn {
+        grid-column: 1/3;
     }
 
     /* Update Sets grid */
     .sets {
         grid: auto / 1fr 1fr 1fr 1fr;
         flex-direction: row;
-        grid-row:2/2;
-        grid-column:1/4;
+        grid-row:3/3;
     }
 
     /* Update Main grid */
     main {
-        grid-row:3/4;
-        grid-column:1/4;
+        grid-row:4/5;
     }
 
     /* Update numPad grid */
     .numPad {
-        grid-row:4/4;
+        grid-row:5/5;
         grid-column:1/3;
     }
 
     .achievements {
-        grid-row: 4/5;
+        grid-row: 2/2;
     }
 }

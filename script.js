@@ -105,7 +105,7 @@ $(document).ready(function () {
 
         //Clear & focus the input field:
         $('#userInput').val('');
-        $('#userInput').focus();
+        // $('#userInput').focus();
 
         //First choose a number:
         var num1 = Math.floor((Math.random()*13));
@@ -274,7 +274,7 @@ $(document).ready(function () {
             case "-":
                 $('#userInput').val("-"+currentVal);
                 break;
-            case "?":
+            case "NEW":
                 setSelect();
                 break;
             default:
