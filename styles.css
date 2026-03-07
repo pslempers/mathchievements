@@ -3,22 +3,24 @@
 
 /* ==== TABLE OF CONTENTS ==== */
 /* 1. GENERAL STYLES */
-/* --a. HEADINGS */
-/* --b. INPUTS */
+/* --1a. HEADINGS */
+/* --1b. INPUTS */
 /* 2. HEADER */
 /* 3. BODY */
-/* --a. MAIN */
-/* --b. SET SECTION */
-/* --c. ACHIEVEMENT SECTION */
+/* --3a. MAIN */
+/* --3b. SET SECTION */
+/* --3c. ACHIEVEMENT SECTION */
+/* --3d. CLICKBOARD */
+
 /* 4. FOOTER */
 /* 5. ANIMATIONS */
-/* --a. ANIMATED CLASSES */
-/* --b. ANIMATION KEYFRAMES */
+/* --5a. ANIMATED CLASSES */
+/* --5b. ANIMATION KEYFRAMES */
 /* 6. MEDIA QUERY STYLES */
 /* =========================== */
 
 /* 1. GENERAL STYLES */
-/* --a. HEADINGS */
+/* --1a. HEADINGS */
 h1 {
     text-align: center;
     text-justify: inter-character;
@@ -26,7 +28,7 @@ h1 {
     height: auto;
 }
 
-/* --b. INPUTS */
+/* --1b. INPUTS */
 input {
     all:unset;
     width: 95%;
@@ -66,7 +68,7 @@ body {
     height:90vh;
 }
 
-/* --a. MAIN */
+/* --3a. MAIN */
 main {
     margin:10px;
     padding:5px;
@@ -187,7 +189,7 @@ main {
     text-align: center;
 }
 
-/* --b. SET SECTION */
+/* --3b. SET SECTION */
 .sets {
     display: inline-grid;
     /* border: solid 4px #fff;
@@ -233,7 +235,7 @@ main {
     justify-content: center;
 }
 
-/* --c. ACHIEVEMENT SECTION */
+/* --3c. ACHIEVEMENT SECTION */
 .achievements {
     border: solid 4px #fff;
     margin:10px;
@@ -248,15 +250,14 @@ main {
     border-radius:5px;
 }
 
-.log__active {
-    
-}
+/* --3d. CLICKBOARD */
+
 
 /* 4. FOOTER */
 
 
 /* 5. ANIMATIONS */
-/* --a. ANIMATED CLASSES */
+/* --5a. ANIMATED CLASSES */
 .correct {
     animation-name: correct-anim;
     animation-duration: 1s;
@@ -271,7 +272,7 @@ main {
     /* animation-iteration-count: 1; */
 }
 
-/* --b. ANIMATION KEYFRAMES */
+/* --5b. ANIMATION KEYFRAMES */
 @keyframes correct-anim {
   0% {
     color: white;
