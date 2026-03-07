@@ -28,6 +28,7 @@ $(document).ready(function () {
 
     //Define global variables:
     var answer;
+    var remainder;
 
     //Create Start Button:
     $('#startBtn').click(() => {
@@ -35,7 +36,7 @@ $(document).ready(function () {
         if ($('.selected').length > 0) {
             
             //Focus the input field
-            $('.scroller').focus();
+            $('#userInput').focus();
             //run the setSelect() function to display an equation
             setSelect();
 
@@ -46,7 +47,7 @@ $(document).ready(function () {
             $('.equation').css('display', 'inline-grid');
             //Display the equals(submit) button and the number scroller
             $('#equals').css('display', 'flex');
-            $('.scroller').css('display', 'flex');
+            $('#userInput').css('display', 'flex');
         }
         //else, prompt user to select a set
         else {
@@ -58,7 +59,6 @@ $(document).ready(function () {
 
     //Menu for Sets
     $(".set").click(function() {
-        console.log('click');
         $(this).toggleClass("selected");
     });
 
@@ -90,7 +90,7 @@ $(document).ready(function () {
 
             //Hide the Equals Button and Number Scroller
             $('#equals').hide();
-            $('.scroller').hide();
+            $('#userInput').hide();
             //Hide the equation div:
             $('.equation').hide();
             //Display the Start Button and Intro Msg div
@@ -186,7 +186,7 @@ $(document).ready(function () {
         var num1 = Math.floor((Math.random()*13));
         
         //Choose a second number:
-        var num2 = Math.floor((Math.random()*13));
+        var num2 = Math.floor((Math.random()*12)) + 1; // Never allow 0.
 
         //Update the operator div:
         $('.operator').html('÷');
@@ -194,21 +194,16 @@ $(document).ready(function () {
         //Edit the num divs to display the equation:
         $('.num1').html(`${num1}`);
         $('.num2').html(`${num2}`);
-        
-        //Compute and save the expected result:
-        answer = num1 / num2;
 
-        //Clean up the answer to significant digits
-        if (answer.toFixed(10) - answer.toFixed(2) > 0) {
-            console.log(answer.toFixed(6) - answer.toFixed(2));
-            console.log(answer);
-            answer = answer.toFixed(2);
-        }
-        if (answer === Infinity) {
-            setSelect();
-        }
+        //Compute and save the expected result:
+        answer = Math.trunc(num1 / num2);
+
+        remainder = num1 % num2;
+
+
 
         console.log(answer);
+        console.log("remainder: " + remainder);
     }
 
     //Receive input from the question Form:
@@ -223,12 +218,12 @@ $(document).ready(function () {
         
         if (userInput == answer) {
             console.log("Correct!");
-            animCorrect('.scroller');
+            animCorrect('#userInput');
             // Refresh the equation when correct:
             setTimeout(() => {setSelect()}, 500);
         } else {
             console.log("False.");
-            animIncorrect('.scroller');
+            animIncorrect('#userInput');
         }
     })
 
@@ -258,7 +253,7 @@ $(document).ready(function () {
     $('.numKey').on('click', (e) => {
         // console.log(e.currentTarget.value);
         addNum(e.currentTarget.value);
-        // console.log($('.scroller').val());
+        // console.log($('#userInput').val());
     })
 
     /** addNum(id)
@@ -266,6 +261,7 @@ $(document).ready(function () {
      * @param {} id - Numeric input allowing 0-9, dashes and dots.
      */
     function addNum(id) {
+        let currentVal = $('#userInput').val();
         switch(id) {
             case "ENT":
                 if($('.selected').length > 0){
@@ -273,16 +269,16 @@ $(document).ready(function () {
                 }
                 break;
             case "C":
-                $('.scroller').val('');
+                $('#userInput').val('');
                 break;
             case "-":
-                $('.scroller').val("-"+$('.scroller').val());
+                $('#userInput').val("-"+currentVal);
                 break;
-            case ".":
-                $('.scroller').val($('.scroller').val().concat("."));
+            case "?":
+                setSelect();
                 break;
             default:
-                $('.scroller').val($('.scroller').val() + `${id}`);
+                $('#userInput').val($('#userInput').val() + `${id}`);
                 break;
         }
     }
