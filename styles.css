@@ -81,10 +81,13 @@ button:hover {
 body {
     display:grid;
     grid: 80px 1fr 2fr / 1fr 3fr 3fr; /* Specify the first row height */
+    overflow:hidden;
+    position:fixed;
     color:white;
     background-color: #000;
     font-family: 'Press Start 2P', sans-serif;
-    height:90vh;
+    height:100%;
+    width:100%;
 }
 
 /* --3a. MAIN */
