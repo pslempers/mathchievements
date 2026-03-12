@@ -19,7 +19,7 @@
         </section>
         <main>
 
-            <form action="/" id="qForm" method="post">
+            <form action="" id="qForm" method="post">
                 <div class="introMsg">
                     <h2>Welcome!</h2>
                 </div>
@@ -28,15 +28,17 @@
                     <div class="operator"></div>
                     <div class="num num2"></div>
                 </div>
-                <button class="mainZone"  id="startBtn">
+                <button type="button" class="mainZone"  id="startBtn">
                     <h2>Start</h2>
                 </button>
-                <input type="submit" class="mainZone" id="equals" value="equals" style="display:none"></input>
+                <button type="submit" class="mainZone" id="equals" value="equals" style="display:none">equals</button>
                 <input type="number" inputmode="decimal" placeholder="0" class="mainZone scroller" id="userInput" step="any"></input>
             </form>
         </main>
         <section class="achievements">
-            achievement zone
+            <p id="logTitle">Global Achievements</p>
+            <hr>
+            <ul id="logList"></ul>
         </section>
         <div class="numPad">
             <button class="numKey" id="numKey1" value="1">1</button>
@@ -51,7 +53,7 @@
             <button class="numKey" id="numKey-" value="-">-</button>
             <button class="numKey" id="numKey0" value="0">0</button>
             <button class="numKey" id="numKey" value="NEW">NEW</button>
-            <button class="numKey" id="numKeyENT" value="ENT">ENT</button>
+            <button type="button" class="numKey" id="numKeyENT" value="ENT">ENT</button>
             <button class="numKey" id="numKeyC" value="C">C</button>
         </div>
     </body>

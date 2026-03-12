@@ -5,6 +5,7 @@
 /* 1. GENERAL STYLES */
 /* --1a. HEADINGS */
 /* --1b. INPUTS */
+/* --1c. LISTS */
 /* 2. HEADER */
 /* 3. BODY */
 /* --3a. MAIN */
@@ -21,282 +22,309 @@
 
 /* 1. GENERAL STYLES */
 html {
-    touch-action: manipulation;
+  touch-action: manipulation;
 }
 
 /* --1a. HEADINGS */
 h1 {
-    font-size: 2em;
-    text-align: center;
-    text-justify: inter-character;
-    grid-column: 1/4;
-    height: auto;
-    transition:0.5s;
+  font-size: 2em;
+  text-align: center;
+  text-justify: inter-character;
+  grid-column: 1/4;
+  height: auto;
+  transition:0.5s;
 }
 h2 {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 /* --1b. INPUTS */
 input {
-    all:unset;
-    width: 95%;
-    box-sizing:border-box;
-    font-size: inherits;
+  all:unset;
+  width: 95%;
+  box-sizing:border-box;
+  font-size: inherits;
 }
 input[type="number"]::-webkit-inner-spin-button {
   cursor:pointer;
-    -webkit-appearance:none;
-    overflow:scroll;
-    background: linear-gradient(white,black, white);
-    /* https://bennettfeely.com/clippy/ */
-    clip-path: polygon(50% 0, 100% 30%, 65% 30%, 65% 70%, 100% 70%, 50% 100%, 0 70%, 35% 70%, 35% 30%, 0 30%);
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    bottom: 5px;
-    width: 12%;
-    transition:0.5s;
+  -webkit-appearance:none;
+  overflow:scroll;
+  background: linear-gradient(white,black, white);
+  /* https://bennettfeely.com/clippy/ */
+  clip-path: polygon(50% 0, 100% 30%, 65% 30%, 65% 70%, 100% 70%, 50% 100%, 0 70%, 35% 70%, 35% 30%, 0 30%);
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  bottom: 5px;
+  width: 12%;
+  transition:0.5s;
 }
 button {
-    all:unset;
-    border: solid 4px white;
-    text-align: center;
-    margin:10px;
+  all:unset;
+  border: solid 4px white;
+  text-align: center;
+  margin:10px;
 }
 button:hover {
-    color: yellow;
-    border: solid 4px yellow;
-    transition:0.5s;
+  color: yellow;
+  border: solid 4px yellow;
+  transition:0.5s;
+}
+
+/* --1c. LISTS */
+ul {
+  all:unset;
 }
 
 
 /* 2. HEADER */
 #logo {
-    text-align: left;
-    margin-left: 20px;
+  text-align: left;
+  margin-left: 20px;
 }
 
 /* 3. BODY */
 body {
-    display:grid;
-    grid: 80px 1fr 2fr / 1fr 3fr 3fr; /* Specify the first row height */
-    overflow:hidden;
-    position:fixed;
-    color:white;
-    background-color: #000;
-    font-family: 'Press Start 2P', sans-serif;
-    height:100%;
-    width:100%;
+  display:grid;
+  grid: 80px 1fr 2fr / 1fr 3fr 3fr; /* Specify the first row height */
+  overflow:hidden;
+  position:fixed;
+  color:white;
+  background-color: #000;
+  font-family: 'Press Start 2P', sans-serif;
+  height:100%;
+  width:100%;
 }
 
 /* --3a. MAIN */
 main {
-    grid-row:2/4;
-    margin:10px;
-    padding:5px;
+  grid-row:2/4;
+  margin:10px;
+  padding:5px;
 }
 
 .introMsg {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    border: solid 4px #fff;
-    grid-column: 1/4;
-    margin:10px;
-    padding:5px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 4px #fff;
+  grid-column: 1/4;
+  margin:10px;
+  padding:5px;
 }
 
 /* FORM ELEMENTS */
 #qForm {
-    display: inline-grid;
-    grid: 2fr 1fr / 1fr 2fr;
-    border: solid 4px #fff;
-    width:100%;
-    height:100%;
-    transition:0.5s;
+  display: inline-grid;
+  grid: 2fr 1fr / 1fr 2fr;
+  border: solid 4px #fff;
+  width:100%;
+  height:100%;
+  transition:0.5s;
 }
 #startBtn {
-    display:flex;
+  display:flex;
 }
 
 .mainZone {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    border: solid 4px #fff;
-    margin:10px;
-    transition:0.5s;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 4px #fff;
+  margin:10px;
+  transition:0.5s;
 }
 
 .equation {
-    grid-column: 1/4;
-    display:none;
-    /* display: inline-grid; */
-    grid: 1fr 1fr / 1fr auto;
-    /* border: solid 4px white; */
+  grid-column: 1/4;
+  display:none;
+  /* display: inline-grid; */
+  grid: 1fr 1fr / 1fr auto;
+  /* border: solid 4px white; */
 }
 
 .num {
-    display:flex;
-    align-items: center;
-    justify-content: right;
-    padding-right: 10px;
-    font-size: 3em;
-    transition:0.5s;
-    /* border: solid 4px #fff; */
+  display:flex;
+  align-items: center;
+  justify-content: right;
+  padding-right: 10px;
+  font-size: 3em;
+  transition:0.5s;
+  /* border: solid 4px #fff; */
 }
 
 .num1 {
-    grid-column: 1/3;
+  grid-column: 1/3;
 }
 
 .num2 {
-    grid-column: 2/2;
+  grid-column: 2/2;
 }
 
 .operator {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3em;
-    grid-column: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  grid-column: 1/1;
 }
 
 /* START BUTTON */
 #startBtn {
-    grid-column: 1/3;
-    display:flex;
-    align-items: center;
-    justify-items: center;
+  grid-column: 1/3;
+  display:flex;
+  align-items: center;
+  justify-items: center;
 }
 #startBtn:hover {
-    color:yellow;
-    border: solid yellow 4px;
+  color:yellow;
+  border: solid yellow 4px;
 }
 
 
 /* SCROLLER ELEMENT */
 
 .scroller {
-    display:none;
-    text-align: right;
-    padding-right: 10px;
-    /* margin-right: 10px; */
-    font-size: 3em;
-    transition: 0.5s;
+  display:none;
+  text-align: right;
+  padding-right: 10px;
+  /* margin-right: 10px; */
+  font-size: 3em;
+  transition: 0.5s;
 }
 .scroller:hover {
-    color: yellow;
-    border: solid yellow 4px;
+  color: yellow;
+  border: solid yellow 4px;
 }
 
 #userInput {
-    display:none;
+  display:none;
 }
 
 #equals {
-    display:none;
-    text-align:center;
-    transition: 0.5s;
+  display:none;
+  text-align:center;
+  transition: 0.5s;
 }
 #equals:hover {
-    color: yellow;
-    border: solid yellow 4px;
+  color: yellow;
+  border: solid yellow 4px;
 }
 
 #equation {
-    color: green;
+  color: green;
 }
 
 #result {
-    text-align: center;
+  text-align: center;
 }
 
 #startBtn {
-    text-align: center;
+  text-align: center;
 }
 
 /* --3b. SET SECTION */
 .sets {
-    grid-row:2/4;
-    display: inline-grid;
-    grid: 1fr 1fr 1fr 1fr / auto;
-    transition:0.5s;
+  grid-row:2/4;
+  display: inline-grid;
+  grid: 1fr 1fr 1fr 1fr / auto;
+  transition:0.5s;
 }
 .set {
-    border: solid 4px #fff;
-    margin: 10px;
-    padding:5px;
-    transition:0.5s;
+  border: solid 4px #fff;
+  margin: 10px;
+  padding:5px;
+  transition:0.5s;
 }
 .set:hover {
-    color: yellow;
-    border: solid 4px yellow;
+  color: yellow;
+  border: solid 4px yellow;
 }
 .selected {
-    color: black;
-    background-color: #fff;
+  color: black;
+  background-color: #fff;
 }
 .selected:hover {
-    color: orange;
-    border:4px solid orange !important;
+  color: orange;
+  border:4px solid orange !important;
 }
 #addSet {
-    display:flex;
-    align-items: center;
-    justify-content: center;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 #subSet {
-    display:flex;
-    align-items: center;
-    justify-content: center;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 #mltSet {
-    display:flex;
-    align-items: center;
-    justify-content: center;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 #divSet {
-    display:flex;
-    align-items: center;
-    justify-content: center;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* --3c. ACHIEVEMENT SECTION */
 .achievements {
-    grid-row:2/2;
-    border: solid 4px #fff;
-    margin:10px;
-    padding:5px;
+  overflow:scroll;
+  grid-row:2/2;
+  border: solid 4px #fff;
+  scrollbar-width: 2em;
+  scrollbar-color: white black;
+  margin:10px;
+  padding:5px;
 }
-#achievementDiv {
-    background-color:green;
-    color:white;
-    border:solid 2px black;
-    width:200px;
-    padding:5px;
-    border-radius:5px;
+
+#logTitle {
+  color:yellow;
+  padding:2px 0;
+  margin:0;
+}
+.achievement {
+  list-style: none;
+  padding:5px;
+}
+
+.achName {
+  color:yellow;
+
+}
+.achCount {
+  color: lime;
+}
+.achDesc {
+  opacity: 0; 
+  font-size: 1em;
+  transition:0.5s;
+  transform: scale(0.1); 
+  
+  /* Apply the animation */
+  animation: popIn 1s forwards;
 }
 
 /* --3d. NUMPAD */
 .numPad {
-    border: solid 4px #fff;
-    display: inline-grid;
-    grid: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
-    margin:10px;
-    padding:5px;
+  border: solid 4px #fff;
+  display: inline-grid;
+  grid: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
+  margin:10px;
+  padding:5px;
 }
 .numPad:hover {
-    border:solid 4px yellow;
-    transition:0.5s;
+  border:solid 4px yellow;
+  transition:0.5s;
 }
 #numKeyENT {
-    grid-column:1/3;
+  grid-column:1/3;
 }
 #numKeyC:hover {
-    color:orangered;
-    border:solid 4px orangered;
+  color:orangered;
+  border:solid 4px orangered;
 }
 
 /* 4. FOOTER */
@@ -305,56 +333,72 @@ main {
 /* 5. ANIMATIONS */
 /* --5a. ANIMATED CLASSES */
 .correct {
-    animation-name: correct-anim;
-    animation-duration: 1s;
-    animation-timing-function: ease;
-    /* animation-iteration-count: 1; */
+  animation-name: correct-anim;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  /* animation-iteration-count: 1; */
 }
 
 .incorrect {
-    animation-name: incorrect-anim;
-    animation-duration: 0.7s;
-    animation-timing-function: ease-in;
-    /* animation-iteration-count: 1; */
+  animation-name: incorrect-anim;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in;
+  /* animation-iteration-count: 1; */
 }
 
 /* --5b. ANIMATION KEYFRAMES */
 
 /* Correct! Animation */
 @keyframes correct-anim {
-  0% {
-    color: white;
-    transform: scale(1);
-}
+0% {
+  color: white;
+  transform: scale(1);
+  }
 50% {
-    color: lime;
-    border: solid 4px lime;
-    transform:scale(1.2);
-}
+  color: lime;
+  border: solid 4px lime;
+  transform:scale(1.2);
+  }
 100% {
-    color: white;
-    transform: scale(1);
+  color: white;
+  transform: scale(1);
   }
 }
 
 /* Incorrect... Animation */
 @keyframes incorrect-anim {
-  0% {
-    color: white;
-    transform: translateX(0);
-}
+0% {
+  color: white;
+  transform: translateX(0);
+  }
 33% {
-    color: orange;
-    border: solid 4px orange;
-    transform: translateX(-5px);
-}
+  color: orange;
+  border: solid 4px orange;
+  transform: translateX(-5px);
+  }
 66% {
-    color: orange;
-    border: solid 4px orange;
-    transform: translateX(5px);
-}
+  color: orange;
+  border: solid 4px orange;
+  transform: translateX(5px);
+  }
 100% {
-    color: white;
+  color: white;
+  }
+}
+
+/* Pop in Animation */
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.1); /* Start very small */
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5); /* Pop slightly larger than final size for a bounce effect */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1); /* Settle at final size */
   }
 }
 
@@ -362,48 +406,48 @@ main {
 /* Styles for screens 600px wide or less (e.g., phones) */
 @media (max-width: 600px) {
 
-    /* Make h1, h2 a little smaller */
-    h1 {
-        font-size: 1.5em;
-    }
-    h2 {
-        font-size: 1.2em;
-    }
+  /* Make h1, h2 a little smaller */
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
 
-    /* Update body grid layout */
-    body {
-        grid: 1fr 1fr 1fr 3fr 2fr / 1fr; /* Specify the first row height */
-    }
+  /* Update body grid layout */
+  body {
+    grid: 1fr 1fr 1fr 3fr 2fr / 1fr; /* Specify the first row height */
+  }
 
-    /* Update introMsg */
-    .introMsg {
-        grid-column: 1/3;
-    }
+  /* Update introMsg */
+  .introMsg {
+    grid-column: 1/3;
+  }
 
-    /* Update startBtn */
-    #startBtn {
-        grid-column: 1/3;
-    }
+  /* Update startBtn */
+  #startBtn {
+    grid-column: 1/3;
+  }
 
-    /* Update Sets grid */
-    .sets {
-        grid: auto / 1fr 1fr 1fr 1fr;
-        flex-direction: row;
-        grid-row:3/3;
-    }
+  /* Update Sets grid */
+  .sets {
+    grid: auto / 1fr 1fr 1fr 1fr;
+    flex-direction: row;
+    grid-row:3/3;
+  }
 
-    /* Update Main grid */
-    main {
-        grid-row:4/5;
-    }
+  /* Update Main grid */
+  main {
+    grid-row:4/5;
+  }
 
-    /* Update numPad grid */
-    .numPad {
-        grid-row:5/5;
-        grid-column:1/3;
-    }
+  /* Update numPad grid */
+  .numPad {
+    grid-row:5/5;
+    grid-column:1/3;
+  }
 
-    .achievements {
-        grid-row: 2/2;
-    }
+  .achievements {
+    grid-row: 2/2;
+  }
 }
