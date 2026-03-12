@@ -285,6 +285,12 @@ main {
   padding:2px 0;
   margin:0;
 }
+.down-arrow {
+  animation-name: flashing;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transition: 1s;
+}
 .achievement {
   list-style: none;
   padding:5px;
@@ -296,15 +302,11 @@ main {
 }
 .achCount {
   color: lime;
+  animation: popIn 1s forwards;
 }
 .achDesc {
-  opacity: 0; 
   font-size: 1em;
   transition:0.5s;
-  transform: scale(0.1); 
-  
-  /* Apply the animation */
-  animation: popIn 1s forwards;
 }
 
 /* --3d. NUMPAD */
@@ -390,15 +392,34 @@ main {
 @keyframes popIn {
   0% {
     opacity: 0;
-    transform: scale(0.1); /* Start very small */
+    /* font-size: small; */
+    letter-spacing: normal;
   }
   50% {
     opacity: 1;
-    transform: scale(1.5); /* Pop slightly larger than final size for a bounce effect */
+    /* font-size: larger; */
+    letter-spacing: 0.2em;
   }
   100% {
     opacity: 1;
-    transform: scale(1); /* Settle at final size */
+    /* font-size: medium; */
+    letter-spacing: normal;
+  }
+}
+
+/* Flashing Animation */
+@keyframes flashing {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
